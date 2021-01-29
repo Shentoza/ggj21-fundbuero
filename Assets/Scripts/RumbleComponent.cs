@@ -10,8 +10,8 @@ public class RumbleComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        XInputController inputController;
-        inputController.SetMotorSpeeds();
+        //XInputController inputController;
+        //inputController.SetMotorSpeeds();
     }
 
     // Update is called once per frame
