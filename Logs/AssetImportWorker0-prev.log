@@ -229,3 +229,153 @@ System memory in use after: 45.6 MB.
 Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 1612.
 Total: 1.506900 ms (FindLiveObjects: 0.131200 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.312400 ms  DeleteObjects: 0.026700 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 599.942784 seconds.
+  path: Assets/Scripts/Player/PlayerController.cs
+  artifactKey: Guid(d822c0bee9759e04e8033c8cf8e1f31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerController.cs using Guid(d822c0bee9759e04e8033c8cf8e1f31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562dd05e1d4e53acc10cc3db417cedbe') in 0.010183 seconds
+  Import took 0.012446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.362117 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(239222219fd99a64487d24fd8c5f6f03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(239222219fd99a64487d24fd8c5f6f03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f288725311e0c21fc7e65d389c2d13ac') in 0.008349 seconds
+  Import took 0.010469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.069762 seconds.
+  path: Assets/Scenes/Default.unity
+  artifactKey: Guid(f85d0c32a9817554e96a0786d9f791ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default.unity using Guid(f85d0c32a9817554e96a0786d9f791ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '606dcb5d216d8d695520812ba1c6fdaa') in 0.014364 seconds
+  Import took 0.015988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.399916 seconds.
+  path: Assets/Scenes/Joscha.unity
+  artifactKey: Guid(1f616195fbe9c5044bf43276bb851ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Joscha.unity using Guid(1f616195fbe9c5044bf43276bb851ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8dd8d705ac50647c185e13f2336dc16') in 0.007912 seconds
+  Import took 0.009487 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006655 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  0.798 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 431 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.1 MB.
+System memory in use after: 45.2 MB.
+
+Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 1614.
+Total: 1.566800 ms (FindLiveObjects: 0.129200 ms CreateObjectMapping: 0.029200 ms MarkObjects: 1.371900 ms  DeleteObjects: 0.035700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010211 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 67.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  2.120 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Nature/SpeedTree7': dependency 'BillboardShader' shader 'Universal Render Pipeline/Nature/SpeedTree7 Billboard' not found
+Shader 'Universal Render Pipeline/Baked Lit': fallback shader 'Universal Render Pipeline/Unlit' not found
+Shader 'Universal Render Pipeline/Simple Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'AddPassShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapGenShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen)' not found
+Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1677 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.5 MB.
+System memory in use after: 90.3 MB.
+
+Unloading 118 unused Assets to reduce memory usage. Loaded Objects now: 2806.
+Total: 3.627200 ms (FindLiveObjects: 0.315000 ms CreateObjectMapping: 0.118000 ms MarkObjects: 1.468400 ms  DeleteObjects: 1.724400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 321.752858 seconds.
+  path: Assets/Shaders
+  artifactKey: Guid(3a3a7639da5ad324389cba378caa41d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders using Guid(3a3a7639da5ad324389cba378caa41d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b9008edec3a4c72fb557804ab23ebb') in 0.009724 seconds
+  Import took 0.013324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.002844 seconds.
+  path: Assets/Shaders/URP.asset
+  artifactKey: Guid(67fc3aca0531f7d46af7e3c99e04f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/URP.asset using Guid(67fc3aca0531f7d46af7e3c99e04f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7449001897799c4eb480ef4343d4f99') in 0.071982 seconds
+  Import took 0.076022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Shaders/URP_Renderer.asset
+  artifactKey: Guid(c015a02c116ef8544bd23e48ed67ddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/URP_Renderer.asset using Guid(c015a02c116ef8544bd23e48ed67ddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9462f560ed2efd7bd4dd97650106c3') in 0.044288 seconds
+  Import took 0.048314 seconds .
+
+========================================================================
+Received Prepare
+Switching render pipeline 00000000000000000000000000000000 -> 67fc3aca0531f7d46af7e3c99e04f0c1
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 27.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 164 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.6 MB.
+System memory in use after: 65.4 MB.
+
+Unloading 96 unused Assets to reduce memory usage. Loaded Objects now: 2874.
+Total: 4.683400 ms (FindLiveObjects: 0.203300 ms CreateObjectMapping: 0.088300 ms MarkObjects: 2.429200 ms  DeleteObjects: 1.961700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.741838 seconds.
+  path: Assets/Shaders/URP_Renderer.asset
+  artifactKey: Guid(c015a02c116ef8544bd23e48ed67ddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/URP_Renderer.asset using Guid(c015a02c116ef8544bd23e48ed67ddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06016bb55d64529d1d435390f3ac754b') in 0.004837 seconds
+  Import took 0.007888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Shaders/URP.asset
+  artifactKey: Guid(67fc3aca0531f7d46af7e3c99e04f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/URP.asset using Guid(67fc3aca0531f7d46af7e3c99e04f0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e39791a0d241d5a45a8c7eeb51bb33f') in 0.004476 seconds
+  Import took 0.007668 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
