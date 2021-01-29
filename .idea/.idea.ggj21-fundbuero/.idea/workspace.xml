@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3d378f60-ed08-41a0-951e-c3d0a7488ef4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,7 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nkyDeHtWYxxNUUow1PI8cfaYoo" />
@@ -67,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611948268916</updated>
-      <workItem from="1611948285156" duration="3313000" />
+      <workItem from="1611948285156" duration="3948000" />
     </task>
     <servers />
   </component>
