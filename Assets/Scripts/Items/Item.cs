@@ -12,5 +12,18 @@ public class FoundItem : ScriptableObject
 
     public SoundPart Sound;
 
-    public MeshRenderer Mesh;
+    public VisualPart Visuals;
+
+    public float Compare(FoundItem other)
+    {
+        float Equals = 0.0f;
+        float Max = 3.0f;
+
+        Equals += other.Rumble.Equals(Rumble) ? 1.0f : 0.0f;
+        Equals += other.Sound.Equals(Sound) ? 1.0f : 0.0f;
+        Equals += other.Visuals.Equals(Visuals) ? 1.0f : 0.0f;
+
+        return Equals / Max;
+    }
+
 }

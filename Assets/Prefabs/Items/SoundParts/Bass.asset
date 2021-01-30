@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Bass
   m_EditorClassIdentifier: 
   Event: event:/bass_sound
+  Description: boooom

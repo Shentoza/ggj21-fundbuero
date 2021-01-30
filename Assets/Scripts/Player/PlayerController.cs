@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     private FoundItem CurrentItem;
 
+    public RumblePart DebugRumble;
+
     [Range(0, 5)] public float TimeBetweenSteps = 0.5f;
 
     private void Start()
@@ -38,6 +40,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PlayDebugRumble(InputAction.CallbackContext Context)
+    {
+        if (Context.started)
+        {
+            Rumbler.PlayRumble(DebugRumble);
+        }
+    }
+
     void UseItem(FoundItem Item)
     {
         CurrentItem = Item;
@@ -46,26 +56,45 @@ public class PlayerController : MonoBehaviour
 
     void OnRumbleFinish()
     {
-        Debug.Log("Rumble Finished");
-        Invoke("PlaySound", TimeBetweenSteps);
-
+        //Debug.Log("Rumble Finished");
+        if (CurrentItem)
+        {
+            Invoke("PlaySound", TimeBetweenSteps);
+        }
     }
 
     void PlayRumble()
     {
         Debug.Log(CurrentItem.Rumble.name);
         Rumbler.PlayRumble(CurrentItem.Rumble);
+        GameManager.Instance.SetItemDescription(CurrentItem.Rumble.GetDescription());
     }
 
     void PlaySound()
     {
         Debug.Log(CurrentItem.Sound.name);
         SoundComp.PlaySound(CurrentItem.Sound);
+        GameManager.Instance.SetItemDescription(CurrentItem.Sound.GetDescription());
     }
 
     void OnSoundFinish()
     {
         Debug.Log("Sound Finished");
+        if (CurrentItem)
+        {
+            Invoke("ShowVisuals", TimeBetweenSteps);
+        }
+    }
+
+    void ShowVisuals()
+    {
+        Instantiate(CurrentItem.Visuals.Visual);
+    }
+
+    void OnItemFinish()
+    {
+        GameManager.Instance.SetItemDescription("");
+        CurrentItem = null;
     }
 
 
