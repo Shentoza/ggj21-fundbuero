@@ -27,7 +27,6 @@ public class RumbleComponent : MonoBehaviour
     {
         float timePassed = Time.time - StartTime;
         float CurrentVal = CurrentRumble.Curve.Evaluate(timePassed);
-        Debug.Log(CurrentVal);
         Gamepad.current.SetMotorSpeeds(CurrentVal, CurrentVal);
         if (timePassed > CurrentRumble.repeatFor)
         {

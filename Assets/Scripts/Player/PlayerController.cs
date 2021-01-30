@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     protected SoundComponent SoundComp;
 
     private FoundItem CurrentItem;
-    
+
+    [Range(0, 5)] public float TimeBetweenSteps = 0.5f;
 
     private void Start()
     {
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
     void OnRumbleFinish()
     {
         Debug.Log("Rumble Finished");
-        
+        Invoke("PlaySound", TimeBetweenSteps);
+
     }
 
     void PlayRumble()
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
     void PlaySound()
     {
+        Debug.Log(CurrentItem.Sound.name);
         SoundComp.PlaySound(CurrentItem.Sound);
     }
 

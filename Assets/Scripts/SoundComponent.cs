@@ -11,26 +11,35 @@ public class SoundComponent : MonoBehaviour
 
     protected StudioEventEmitter Emitter;
 
+    private bool bExecutionRunning = false;
+
     public UnityEvent FinishedItem;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Emitter = GetComponent<StudioEventEmitter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (bExecutionRunning && !Emitter.IsPlaying())
+        {
+            StopSound();
+        }
     }
 
     public void PlaySound(SoundPart Sound)
     {
         CurrentItem = Sound;
+        bExecutionRunning = true;
+        Emitter.Event = Sound.Event;
+        Emitter.Play();
     }
 
-    void StopItem()
+    void StopSound()
     {
+        bExecutionRunning = false;
         FinishedItem.Invoke();
     }
 }
