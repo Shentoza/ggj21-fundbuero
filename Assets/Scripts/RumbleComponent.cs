@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 //https://github.com/Srfigie/UnityInputSystem_ControlerRumble
 public class RumbleComponent : MonoBehaviour
 {
-    public FoundItem CurrentItem;
+    public RumblePart CurrentRumble;
 
     private bool bExecuteRunning = false;
     private float StartTime = 0.0f;
@@ -26,18 +26,18 @@ public class RumbleComponent : MonoBehaviour
     void ExecuteCurve()
     {
         float timePassed = Time.time - StartTime;
-        float CurrentVal = CurrentItem.Rumble.Curve.Evaluate(timePassed);
+        float CurrentVal = CurrentRumble.Curve.Evaluate(timePassed);
         Debug.Log(CurrentVal);
         Gamepad.current.SetMotorSpeeds(CurrentVal, CurrentVal);
-        if (timePassed > CurrentItem.Rumble.repeatFor)
+        if (timePassed > CurrentRumble.repeatFor)
         {
             StopItem();
         }
     }
 
-    public void PlayItem(FoundItem InItem)
+    public void PlayRumble(RumblePart InRumble)
     {
-        CurrentItem = InItem;
+        CurrentRumble = InRumble;
         bExecuteRunning = true;
         StartTime = Time.time;
     }

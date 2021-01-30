@@ -391,10 +391,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: FMOD/fundbuero/fundbuero.fspro
-  sourceBankPath: FMOD\fundbuero\Build
+  sourceBankPath: FMOD/fundbuero/Build/Desktop
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -415,7 +415,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Music
+  - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -505,13 +507,13 @@ MonoBehaviour:
   active: 1
   Properties:
     LiveUpdate:
-      Value: 0
+      Value: 2
       HasValue: 1
     LiveUpdatePort:
       Value: 9264
       HasValue: 1
     Overlay:
-      Value: 0
+      Value: 2
       HasValue: 1
     Logging:
       Value: 0

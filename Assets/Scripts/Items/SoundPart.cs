@@ -7,5 +7,5 @@ using UnityEngine;
 [System.Serializable]
 public class SoundPart : ScriptableObject
 {
-    public FMODEventPlayable Sound;
+    [EventRef] public string Event;
 }
