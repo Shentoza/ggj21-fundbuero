@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    protected RumbleComponent Rumbler;
+
+    private void Start()
+    {
+        Rumbler = GetComponent<RumbleComponent>();
+        Rumbler.FinishedItem.AddListener(OnRumbleFinish);
+    }
+
     public void Look(InputAction.CallbackContext Context)
     {
         //Look stuff
@@ -14,9 +23,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Context.started)
         {
-            GetComponent<RumbleComponent>().CurrentItem = GameManager.Instance.RandomizeItem();
+            var randomizeItem = GameManager.Instance.RandomizeItem();
+            Debug.Log(randomizeItem.Rumble.name);
+            Rumbler.PlayItem(randomizeItem);
         }
     }
-    
-    
+
+    void OnRumbleFinish()
+    {
+        Debug.Log("Rumble Finished");
+    }
+
+    void OnSoundFinish()
+    {
+        Debug.Log("Sound Finished");
+    }
+
+
 }

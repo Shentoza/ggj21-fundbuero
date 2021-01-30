@@ -6,11 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
-    public ArrayList Rumbles;
+    public List<RumblePart> Rumbles;
 
-    public ArrayList Sounds;
+    public List<SoundPart> Sounds;
 
-    public ArrayList Meshes;
+    public List<MeshRenderer> Meshes;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,17 +28,26 @@ public class GameManager : MonoBehaviour
 
     public FoundItem RandomizeItem()
     {
-        FoundItem NewItem = ScriptableObject.CreateInstance<FoundItem>();
-        int RumbleIndex = Random.Range(0, Rumbles.Count);
-        NewItem.Rumble = (RumblePart)Rumbles[RumbleIndex];
+        FoundItem newItem = ScriptableObject.CreateInstance<FoundItem>();
 
-        int SoundIndex = Random.Range(0, Sounds.Count);
-        NewItem.Sound = (SoundPart)Sounds[SoundIndex];
+        if (Rumbles.Count > 0)
+        {
+            int rumbleIndex = Random.Range(0, Rumbles.Count);
+            newItem.Rumble = (RumblePart)Rumbles[rumbleIndex];
+        }
 
-        int MeshIndex = Random.Range(0, Meshes.Count);
-        NewItem.Mesh = (MeshRenderer) Meshes[MeshIndex];
+        if (Sounds.Count > 0)
+        {
+            int soundIndex = Random.Range(0, Sounds.Count);
+            newItem.Sound = (SoundPart)Sounds[soundIndex];
+        }
 
+        if (Meshes.Count > 0)
+        {
+            int meshIndex = Random.Range(0, Meshes.Count);
+            newItem.Mesh = (MeshRenderer) Meshes[meshIndex];
+        }
 
-        return NewItem;
+        return newItem;
     }
 }
