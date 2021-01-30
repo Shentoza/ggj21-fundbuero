@@ -51,7 +51,6 @@ Builds/
 Logs/AssetImportWorker0.log
 .idea
 Logs
-
 #FMOD#
 /Assets/FMODStudioCache.asset
 /Assets/FMODStudioCache.asset.meta
