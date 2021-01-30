@@ -5,27 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public InputActionAsset Input;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Look(InputAction.CallbackContext Context)
     {
-        
+        //Look stuff
     }
 
     public void Use(InputAction.CallbackContext Context)
     {
-        
+        if (Context.started)
+        {
+            //
+        }
     }
+    
+    
 }

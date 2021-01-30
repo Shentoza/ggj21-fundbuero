@@ -875,6 +875,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: lowFrequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_PreInfinity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_PostInfinity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].time
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[2].time
+      value: 2.9944458
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[0].inSlope
+      value: 0.027216662
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].inSlope
+      value: 0.0017389562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[2].inSlope
+      value: 0.6691444
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[0].outSlope
+      value: 0.027216662
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].outSlope
+      value: 0.0017389562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[2].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[0].outWeight
+      value: 0.21734229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[1].outWeight
+      value: 0.10929992
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: FrequencyCurve.m_Curve.Array.data[2].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
     - target: {fileID: 7378631531782481663, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
         type: 3}
       propertyPath: Input
