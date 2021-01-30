@@ -7,11 +7,12 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     protected RumbleComponent Rumbler;
+    
 
     private void Start()
     {
         Rumbler = GetComponent<RumbleComponent>();
-        Rumbler.FinishedItem.AddListener(OnRumbleFinish);
+        Rumbler.FinishedRumbleItem.AddListener(OnRumbleFinish);
     }
 
     public void Look(InputAction.CallbackContext Context)

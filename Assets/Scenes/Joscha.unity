@@ -873,20 +873,19 @@ PrefabInstance:
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: Rumbles.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: Rumbles.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d3e8df80afde26c4a8d9e352585e9f64,
+      objectReference: {fileID: 11400000, guid: 4d9ebf047cb0e6f4383cd87e8ec92c75,
         type: 2}
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: Rumbles.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 5567b029bfdd8734cb1dd553d3bd5212,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6276004353013186519, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: m_Name

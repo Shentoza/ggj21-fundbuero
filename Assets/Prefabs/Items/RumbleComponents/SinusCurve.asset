@@ -10,30 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d21f64405298fc84c9926fc67f523706, type: 3}
-  m_Name: ConstantHigh
-  m_EditorClassIdentifier: Assembly-CSharp::Rumble
+  m_Name: SinusCurve
+  m_EditorClassIdentifier: 
   Curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: Infinity
+      inSlope: 0
       outSlope: 0
-      tangentMode: 7
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.75
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 1.5
       value: 1
-      inSlope: Infinity
-      outSlope: Infinity
-      tangentMode: 97
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 1
-    m_PostInfinity: 2
+    m_PostInfinity: 1
     m_RotationOrder: 4
   repeatFor: 3

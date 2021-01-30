@@ -6,13 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3d378f60-ed08-41a0-951e-c3d0a7488ef4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ggj21-fundbuero/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ggj21-fundbuero/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Random.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Random.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/RumbleComponents/ConstantHigh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/RumbleComponents/ConstantHigh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/RumbleComponents/SawedHighs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/RumbleComponents/SawedHighs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Joscha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Joscha.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RumbleComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RumbleComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +38,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Items/RumblePart.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RumbleComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RumbleComponent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nkyDeHtWYxxNUUow1PI8cfaYoo" />
@@ -87,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611948268916</updated>
       <workItem from="1611948285156" duration="4978000" />
-      <workItem from="1611997514470" duration="9121000" />
+      <workItem from="1611997514470" duration="9943000" />
     </task>
     <servers />
   </component>

@@ -551,3 +551,140 @@ Received Import Request.
 Start importing Assets/Prefabs/Player.prefab using Guid(11c7e190fcdd9e74ca0af3e5b08d74c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21408f994d7911815d9114459925637') in 0.046221 seconds
   Import took 0.052523 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 66.032561 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(8f61ef876937a7643aa26d19a5d87d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(8f61ef876937a7643aa26d19a5d87d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16565ef854aa7267051c5048f9fd95f6') in 0.016026 seconds
+  Import took 0.020436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.312121 seconds.
+  path: Assets/Scripts/RumbleComponent.cs
+  artifactKey: Guid(7acaac3e9c8b3cf489e2af9bdb54ac70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RumbleComponent.cs using Guid(7acaac3e9c8b3cf489e2af9bdb54ac70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd00e583a295e8ac6936d111d639bedfe') in 0.010231 seconds
+  Import took 0.018853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 199.283688 seconds.
+  path: Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset
+  artifactKey: Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset using Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac808206f4babbe61a8460d47e2e7f1') in 0.014647 seconds
+  Import took 0.019996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.974450 seconds.
+  path: Assets/Prefabs/Items/RumbleComponents/ConstantHigh.asset
+  artifactKey: Guid(d3e8df80afde26c4a8d9e352585e9f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/RumbleComponents/ConstantHigh.asset using Guid(d3e8df80afde26c4a8d9e352585e9f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21eb366408e7fbce6e4960bce85f516b') in 0.012023 seconds
+  Import took 0.021782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset
+  artifactKey: Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset using Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f83651678116518b032812cbc1e3f6a') in 0.006319 seconds
+  Import took 0.011111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.807027 seconds.
+  path: Assets/Prefabs/Manager.prefab
+  artifactKey: Guid(8d2adef69aaf8a04c98af5aefc9def9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Manager.prefab using Guid(8d2adef69aaf8a04c98af5aefc9def9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63e284517e84757b4b4055464a98b6cb') in 0.022940 seconds
+  Import took 0.029393 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.223404 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.448 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1033 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 64 unused Assets to reduce memory usage. Loaded Objects now: 3249.
+Total: 2.220900 ms (FindLiveObjects: 0.225700 ms CreateObjectMapping: 0.090600 ms MarkObjects: 1.877100 ms  DeleteObjects: 0.026100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009645 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.309 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1033 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 64 unused Assets to reduce memory usage. Loaded Objects now: 3251.
+Total: 2.451300 ms (FindLiveObjects: 0.390800 ms CreateObjectMapping: 0.154800 ms MarkObjects: 1.878100 ms  DeleteObjects: 0.026400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.222 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1033 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 64 unused Assets to reduce memory usage. Loaded Objects now: 3253.
+Total: 10.234900 ms (FindLiveObjects: 1.024500 ms CreateObjectMapping: 0.843700 ms MarkObjects: 8.264000 ms  DeleteObjects: 0.096900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 183.142627 seconds.
+  path: Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset
+  artifactKey: Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/RumbleComponents/SinusCurve.asset using Guid(4d9ebf047cb0e6f4383cd87e8ec92c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1438cce5ea8c8f2c6dea684f4f6d0930') in 0.022056 seconds
+  Import took 0.028056 seconds .
+

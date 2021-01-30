@@ -12,14 +12,10 @@ public class RumbleComponent : MonoBehaviour
     private bool bExecuteRunning = false;
     private float StartTime = 0.0f;
 
-    public UnityEvent FinishedItem;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public UnityEvent FinishedRumbleItem;
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         if (bExecuteRunning)
         {
@@ -31,6 +27,7 @@ public class RumbleComponent : MonoBehaviour
     {
         float timePassed = Time.time - StartTime;
         float CurrentVal = CurrentItem.Rumble.Curve.Evaluate(timePassed);
+        Debug.Log(CurrentVal);
         Gamepad.current.SetMotorSpeeds(CurrentVal, CurrentVal);
         if (timePassed > CurrentItem.Rumble.repeatFor)
         {
@@ -49,7 +46,7 @@ public class RumbleComponent : MonoBehaviour
     {
         bExecuteRunning = false;
         Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
-        FinishedItem.Invoke();
+        FinishedRumbleItem.Invoke();
     }
 
     private void OnDisable()
