@@ -14,7 +14,7 @@ public class FoundItem : ScriptableObject
 
     public VisualPart Visuals;
 
-    float Compare(FoundItem other)
+    public float Compare(FoundItem other)
     {
         float Equals = 0.0f;
         float Max = 3.0f;

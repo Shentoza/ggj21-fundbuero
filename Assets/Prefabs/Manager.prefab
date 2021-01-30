@@ -395,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5178627968957728440}
   - component: {fileID: 5831144786901133252}
+  - component: {fileID: 449937553}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -441,6 +442,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 329cdf37d8f07914aa32c555f02259ae, type: 2}
   Visuals:
   - {fileID: 11400000, guid: e69de42f53a92814481e1f731017d8da, type: 2}
+  MaxDuration: 300
   OnGameStart:
     m_PersistentCalls:
       m_Calls:
@@ -456,3 +458,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &449937553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6276004353013186519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28be5f0b81b23c49815f3feb67ce9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnRequestStarted:
+    m_PersistentCalls:
+      m_Calls: []
