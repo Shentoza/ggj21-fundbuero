@@ -139,6 +139,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="GameManager.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="Item.cs" t="Include" />
             <e p="RumblePart.cs" t="Include" />

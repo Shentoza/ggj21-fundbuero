@@ -10,7 +10,7 @@ public class FoundItem : ScriptableObject
 
     public RumblePart Rumble;
 
-    public FMODEventPlayable Sound;
+    public SoundPart Sound;
 
     public MeshRenderer Mesh;
 }

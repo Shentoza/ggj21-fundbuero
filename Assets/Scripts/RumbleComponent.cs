@@ -33,7 +33,7 @@ public class RumbleComponent : MonoBehaviour
         Gamepad.current.SetMotorSpeeds(CurrentVal, CurrentVal);
     }
 
-    void PlayItem(FoundItem InItem)
+    public void PlayItem(FoundItem InItem)
     {
         CurrentItem = InItem;
         bExecuteRunning = true;

@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Context.started)
         {
-            //
+            GetComponent<RumbleComponent>().CurrentItem = GameManager.Instance.RandomizeItem();
         }
     }
     
