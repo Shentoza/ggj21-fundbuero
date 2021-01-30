@@ -48,12 +48,12 @@ Thumbs.db
 # Builds #
 # ====== #
 Builds/
-#Logs/AssetImportWorker0.log
+Logs/AssetImportWorker0.log
 .idea
 Logs
 #FMOD#
-/Assets/FMODStudioCache.asset
-/Assets/FMODStudioCache.asset.meta
-#fmod.log
-#fmod_editor.log
+*/FMODStudioCache.asset
+*/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
 UserSettings/
