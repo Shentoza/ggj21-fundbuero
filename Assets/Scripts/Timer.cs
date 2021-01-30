@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
         {
             TimerText = GetComponent<TextMeshProUGUI>();
         }
+
+        bHasStarted = true;
     }
 
     void Update()
