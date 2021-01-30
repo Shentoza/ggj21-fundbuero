@@ -35,6 +35,6 @@ public class DescriptionComponent : MonoBehaviour
         {
             baseDescr = VisibleDescription;
         }
-        DescriptionText
+       // DescriptionText
     }
 }
