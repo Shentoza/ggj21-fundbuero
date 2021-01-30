@@ -52,8 +52,9 @@ Logs/AssetImportWorker0.log
 .idea
 Logs
 #FMOD#
-*/FMODStudioCache.asset
-*/FMODStudioCache.asset.meta
+**/FMODStudioCache.asset
+**/FMODStudioCache.asset.meta
 fmod.log
 fmod_editor.log
 UserSettings/
+
