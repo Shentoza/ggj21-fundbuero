@@ -964,10 +964,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7378631531782481663, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
-        type: 3}
-      propertyPath: TimeBetweenSteps
-      value: 2.86
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2, type: 3}
