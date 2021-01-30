@@ -18,4 +18,14 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+
+    public void Look(InputAction.CallbackContext Context)
+    {
+        
+    }
+
+    public void Use(InputAction.CallbackContext Context)
+    {
+        
+    }
 }
