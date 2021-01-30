@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 111}
+  m_AnchoredPosition: {x: 299, y: -111}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &509125619
@@ -65,9 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -185,7 +183,7 @@ Canvas:
   m_GameObject: {fileID: 1181666678}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
@@ -272,7 +270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -504, y: 222}
+  m_AnchoredPosition: {x: -471, y: 199}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &692029892435292114
@@ -441,6 +439,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e099835598b5504caa8dd2c266360de, type: 2}
   - {fileID: 11400000, guid: 329cdf37d8f07914aa32c555f02259ae, type: 2}
   Visuals:
+  - {fileID: 11400000, guid: 041ed653fd82d934aae231378416dd84, type: 2}
+  - {fileID: 11400000, guid: 192bf2ebe908c6f45acac19ae697d4d8, type: 2}
+  - {fileID: 11400000, guid: 9f9400cc0a07c3941b72b9cef69bd875, type: 2}
   - {fileID: 11400000, guid: e69de42f53a92814481e1f731017d8da, type: 2}
   MaxDuration: 300
   OnGameStart:
@@ -449,6 +450,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3217792740782941741}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 449937553}
+        m_TargetAssemblyTypeName: CustomerSystem, Assembly-CSharp
+        m_MethodName: StartRequest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -473,3 +486,7 @@ MonoBehaviour:
   OnRequestStarted:
     m_PersistentCalls:
       m_Calls: []
+  OnRequestSubmitted:
+    m_PersistentCalls:
+      m_Calls: []
+  NumOfRandomItems: 5

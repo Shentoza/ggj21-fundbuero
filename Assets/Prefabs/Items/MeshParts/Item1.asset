@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5b1d22889f82ae479d9e9bd8540ac56, type: 3}
-  m_Name: Test
+  m_Name: Item1
   m_EditorClassIdentifier: 
-  Visual: {fileID: 2082050373376781335, guid: 9aaa52ef2a9d75644890eb77a9395e9f, type: 3}
+  Description: <b>thing1 </b>
+  Visual: {fileID: 4214020812844425680, guid: 852ae070361fbd64a994b0fced5461b7, type: 3}

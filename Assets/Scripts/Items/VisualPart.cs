@@ -6,6 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class VisualPart : ScriptableObject, IDescribable
 {
+    [SerializeField]
     protected string Description;
 
     public GameObject Visual;

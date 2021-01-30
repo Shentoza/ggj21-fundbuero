@@ -1,18 +1,41 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ItemInspectController : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> items;
-    [SerializeField] private Transform itemViewPosition;
+    [SerializeField] private List<FoundItem> items = new List<FoundItem>();
+    [SerializeField] private Transform itemViewTransform;
     [SerializeField] private Camera inspectCamera;
 
-    private GameObject currentObject;
+    [SerializeField] private FoundItem currentObject;
+    private GameObject currentViewObject;
     private int currentIndex;
     private bool inspecting;
+
+    [SerializeField] private float RotationSpeedMod = 1.0f;
+
+    private Vector2 CurrentRotationInput;
+
+    private void Awake()
+    {
+        CustomerSystem.OnRequestStartedAction += OnNewRequest;
+    }
+
+    private void FixedUpdate()
+    {
+        if (currentViewObject)
+        {
+            var q = Quaternion.Euler(CurrentRotationInput.y, -CurrentRotationInput.x, 0.0f);
+            currentViewObject.transform.localRotation = (q * currentViewObject.transform.localRotation);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        CustomerSystem.OnRequestStartedAction -= OnNewRequest;
+    }
 
     private void Start()
     {
@@ -28,6 +51,7 @@ public class ItemInspectController : MonoBehaviour
         {
             return;
         }
+
         inspecting = true;
 
         foreach (Camera cam in Camera.allCameras)
@@ -37,30 +61,29 @@ public class ItemInspectController : MonoBehaviour
         }
 
         inspectCamera.gameObject.SetActive(true);
-        
+
         // Show first item
-        currentObject = Instantiate(items[0], itemViewPosition);
+        SetCurrentItem(items[0]);
     }
 
     private void OpenItemDetails()
     {
-        
     }
-    
+
     private void NextItem()
     {
         if (!inspecting)
         {
             return;
         }
-        
+
         currentIndex++;
         if (currentIndex >= items.Count)
         {
             currentIndex = 0;
         }
-        Destroy(currentObject);
-        currentObject = Instantiate(items[currentIndex], itemViewPosition);
+
+        SetCurrentItem(items[currentIndex]);
     }
 
     private void PreviousItem()
@@ -75,8 +98,8 @@ public class ItemInspectController : MonoBehaviour
         {
             currentIndex = items.Count - 1;
         }
-        Destroy(currentObject);
-        currentObject = Instantiate(items[currentIndex], itemViewPosition);
+
+        SetCurrentItem(items[currentIndex]);
     }
 
     private void Update()
@@ -92,11 +115,36 @@ public class ItemInspectController : MonoBehaviour
             Debug.Log("L");
             PreviousItem();
         }
-        
+
         if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
         {
             Debug.Log("R");
             NextItem();
         }
+    }
+
+    public void OnLook(InputAction.CallbackContext Context)
+    {
+        CurrentRotationInput = Context.performed ? Context.ReadValue<Vector2>() : Vector2.zero;
+    }
+
+    public void OnNewRequest(FoundItem RequestedItem, int NumRandomItems)
+    {
+        items.Clear();
+        items.Add(RequestedItem);
+        for (int i = 0; i < NumRandomItems; ++i)
+        {
+            items.Add(GameManager.Instance.RandomizeItem());
+        }
+
+        UtilClass.Shuffle(items);
+    }
+
+    public void SetCurrentItem(FoundItem InFoundItem)
+    {
+        currentObject = InFoundItem;
+        Destroy(currentViewObject);
+        itemViewTransform.rotation = Quaternion.identity;
+        currentViewObject = Instantiate(currentObject.Visuals.Visual, itemViewTransform);
     }
 }

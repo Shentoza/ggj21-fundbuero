@@ -8,17 +8,24 @@ public class CustomerSystem : MonoBehaviour
 
     public UnityEvent OnRequestStarted;
 
-    public event Action<FoundItem> OnRequestStartedAction;
+    public static event Action<FoundItem,int> OnRequestStartedAction;
     
     
     public UnityEvent OnRequestSubmitted;
-    public event Action<float> OnRequestSubmittedAction;
+    public static event Action<float> OnRequestSubmittedAction;
+
+    [SerializeField]
+    protected int NumOfRandomItems = 3;
+    void OnDestroy()
+    {
+        OnRequestStartedAction = null;
+    }
 
     public void StartRequest()
     {
         CurrentRequest = GameManager.Instance.RandomizeItem();
         OnRequestStarted.Invoke();
-        OnRequestStartedAction?.Invoke(CurrentRequest);
+        OnRequestStartedAction?.Invoke(CurrentRequest, NumOfRandomItems);
     }
 
     public void SubmitItem(FoundItem Item)

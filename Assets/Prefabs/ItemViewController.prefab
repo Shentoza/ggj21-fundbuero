@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 4214020812844425680, guid: 852ae070361fbd64a994b0fced5461b7, type: 3}
-  - {fileID: 2684472234592770027, guid: 3a9003692b8fe0d4c8e789a79633a01e, type: 3}
-  - {fileID: 8891865905732873299, guid: d96b1ab56779486479697750930e5b0a, type: 3}
-  - {fileID: 3917997424173098683, guid: cbd030125a2197240b9b4ca3d2ef452c, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itemViewTransform: {fileID: 0}
+  inspectCamera: {fileID: 0}

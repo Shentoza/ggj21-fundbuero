@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7378631531065896931}
   - component: {fileID: 7378631531065896932}
   - component: {fileID: 7378631531065896936}
+  - component: {fileID: 916356545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d822c0bee9759e04e8033c8cf8e1f31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugRumble: {fileID: 0}
   TimeBetweenSteps: 1
 --- !u!114 &7378631531782481662
 MonoBehaviour:
@@ -162,8 +164,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6267751932153384468, guid: 044055149499d414d8d3f35e350b8035,
+          type: 3}
+        m_TargetAssemblyTypeName: ItemInspectController, Assembly-CSharp
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a71911ae-408a-4c73-bf37-faef21c4fe1b
     m_ActionName: Player/Use[/Mouse/press,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 13528fd1-aff7-43df-8913-291fe87b4c7e
+    m_ActionName: Player/DebugButton[/XInputControllerWindows/buttonEast,/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: Player
@@ -207,3 +226,19 @@ MonoBehaviour:
   FinishedItem:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &916356545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378631531782481661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cbc84ab5025294685263120d1e975d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RumbleDescription: So... the object feels like {0}
+  SoundDescription: But it sounds pretty much like {0}
+  VisibleDescription: And it looks just like {0}
+  DescriptionText: {fileID: 0}

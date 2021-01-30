@@ -17,9 +17,18 @@ public class Timer : MonoBehaviour
         }
 
         bHasStarted = true;
+        InvokeRepeating("UpdateTimer", 0.5f, 0.5f);
     }
 
-    void Update()
+
+    string GetTimer()
+    {
+        float Remaining = GameManager.Instance.GetCurrentDuration();
+        var ts = TimeSpan.FromSeconds(Remaining);
+        return string.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
+    }
+
+    void UpdateTimer()
     {
         if (bHasStarted)
         {
@@ -28,13 +37,7 @@ public class Timer : MonoBehaviour
         else
         {
             TimerText.SetText("");
+            CancelInvoke("UpdateTimer");
         }
-    }
-
-    string GetTimer()
-    {
-        float Remaining = GameManager.Instance.GetCurrentDuration();
-        var ts = TimeSpan.FromSeconds(Remaining);
-        return string.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
     }
 }

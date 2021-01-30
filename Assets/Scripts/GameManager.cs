@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         Text.SetText("");
-        OnGameStart.Invoke();
         CurrentDuration = MaxDuration;
+        OnGameStart.Invoke();
     }
 
     void Update()

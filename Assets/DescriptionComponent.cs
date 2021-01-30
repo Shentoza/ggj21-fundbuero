@@ -22,7 +22,7 @@ public class DescriptionComponent : MonoBehaviour
 
     void SetDescription(IDescribable Description)
     {
-        string baseDescr;
+        string baseDescr = "{0}";
         if (Description is RumblePart)
         {
             baseDescr = RumbleDescription;
@@ -35,6 +35,6 @@ public class DescriptionComponent : MonoBehaviour
         {
             baseDescr = VisibleDescription;
         }
-        DescriptionText
+        DescriptionText.SetText(string.Format(baseDescr, Description));
     }
 }
