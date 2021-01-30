@@ -889,6 +889,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509125617, guid: 8d2adef69aaf8a04c98af5aefc9def9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -194
+      objectReference: {fileID: 0}
+    - target: {fileID: 509125617, guid: 8d2adef69aaf8a04c98af5aefc9def9a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 509125617, guid: 8d2adef69aaf8a04c98af5aefc9def9a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 1181666680, guid: 8d2adef69aaf8a04c98af5aefc9def9a, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -1022,9 +1034,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
+      propertyPath: Meshes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Rumbles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Visuals.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Sounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 329cdf37d8f07914aa32c555f02259ae,
+        type: 2}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
       propertyPath: Rumbles.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 5567b029bfdd8734cb1dd553d3bd5212,
+        type: 2}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Rumbles.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d9ebf047cb0e6f4383cd87e8ec92c75,
+        type: 2}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Rumbles.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d3e8df80afde26c4a8d9e352585e9f64,
+        type: 2}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
+      propertyPath: Visuals.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e69de42f53a92814481e1f731017d8da,
         type: 2}
     - target: {fileID: 6276004353013186519, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}

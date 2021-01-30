@@ -68,6 +68,12 @@ public class PlayerController : MonoBehaviour
     void OnSoundFinish()
     {
         Debug.Log("Sound Finished");
+        Invoke("ShowVisuals", TimeBetweenSteps);
+    }
+
+    void ShowVisuals()
+    {
+        Instantiate(CurrentItem.Visuals.Visual);
     }
 
     void OnItemFinish()

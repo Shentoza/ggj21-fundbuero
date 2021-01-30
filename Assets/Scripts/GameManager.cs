@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public List<SoundPart> Sounds;
 
-    public List<MeshRenderer> Meshes;
+    public List<VisualPart> Visuals;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +26,7 @@ public class GameManager : MonoBehaviour
         }
         Text.SetText("");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void SetItemDescription(string InText)
     {
         Text.SetText(InText);
@@ -45,19 +39,19 @@ public class GameManager : MonoBehaviour
         if (Rumbles.Count > 0)
         {
             int rumbleIndex = Random.Range(0, Rumbles.Count);
-            newItem.Rumble = (RumblePart)Rumbles[rumbleIndex];
+            newItem.Rumble = Rumbles[rumbleIndex];
         }
 
         if (Sounds.Count > 0)
         {
             int soundIndex = Random.Range(0, Sounds.Count);
-            newItem.Sound = (SoundPart)Sounds[soundIndex];
+            newItem.Sound = Sounds[soundIndex];
         }
 
-        if (Meshes.Count > 0)
+        if (Visuals.Count > 0)
         {
-            int meshIndex = Random.Range(0, Meshes.Count);
-            newItem.Mesh = (MeshRenderer) Meshes[meshIndex];
+            int meshIndex = Random.Range(0, Visuals.Count);
+            newItem.Visuals = Visuals[meshIndex];
         }
 
         return newItem;

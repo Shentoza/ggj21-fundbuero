@@ -12,5 +12,5 @@ public class FoundItem : ScriptableObject
 
     public SoundPart Sound;
 
-    public MeshRenderer Mesh;
+    public VisualPart Visuals;
 }

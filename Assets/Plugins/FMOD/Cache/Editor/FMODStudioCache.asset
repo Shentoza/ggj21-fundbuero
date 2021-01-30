@@ -19,6 +19,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7484182385357078916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/screamingcat
+  m_EditorClassIdentifier: 
+  Path: event:/screamingcat
+  guid: 23eddbe7f615074aac171b61551c3f88
+  Banks:
+  - {fileID: -7443810606155975268}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7443810606155975268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,7 +57,7 @@ MonoBehaviour:
   Path: FMOD/fundbuero/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637476086762245848
+  lastModified: 637476155960494977
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -53,7 +76,7 @@ MonoBehaviour:
   Path: FMOD/fundbuero/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637476086761960542
+  lastModified: 637476155959058983
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -93,7 +116,7 @@ MonoBehaviour:
   Path: FMOD/fundbuero/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637476086762040599
+  lastModified: 637476155959258104
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -139,12 +162,13 @@ MonoBehaviour:
   - {fileID: -7443810606155975268}
   EditorEvents:
   - {fileID: 4496621274782085575}
+  - {fileID: -7484182385357078916}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6660538833337419762}
   StringsBanks:
   - {fileID: 3170480792852162208}
-  stringsBankWriteTime: 637476086762000444
+  stringsBankWriteTime: 637476155959168437
   cacheVersion: 6
 --- !u!114 &3058731461823949676
 MonoBehaviour:
@@ -180,11 +204,11 @@ MonoBehaviour:
   Path: FMOD/fundbuero/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637476086762000444
+  lastModified: 637476155959168437
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 976
+    Value: 1030
   Exists: 1
 --- !u!114 &4496621274782085575
 MonoBehaviour:
