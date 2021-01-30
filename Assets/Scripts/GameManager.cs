@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +19,18 @@ public class GameManager : MonoBehaviour
     public List<SoundPart> Sounds;
 
     public List<VisualPart> Visuals;
+
+    [SerializeField]
+    protected float MaxDuration = 300.0f;
+
+    protected float CurrentDuration = -1.0f;
+
+    public float GetCurrentDuration()
+    {
+        return CurrentDuration;
+    }
+
+    public UnityEvent OnGameStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +39,13 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         Text.SetText("");
+        OnGameStart.Invoke();
+        CurrentDuration = MaxDuration;
+    }
+
+    void Update()
+    {
+        CurrentDuration -= Time.deltaTime;
     }
     
     public void SetItemDescription(string InText)
@@ -55,5 +76,12 @@ public class GameManager : MonoBehaviour
         }
 
         return newItem;
+    }
+    
+    public void NewCustomer(){
+        //SpawnCustomer()
+        
+        
+        //Generiere Anfrage
     }
 }
