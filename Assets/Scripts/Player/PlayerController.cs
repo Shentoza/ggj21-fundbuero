@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void OnRumbleFinish()
     {
-        Debug.Log("Rumble Finished");
+        //Debug.Log("Rumble Finished");
         Invoke("PlaySound", TimeBetweenSteps);
 
     }
@@ -55,17 +55,24 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log(CurrentItem.Rumble.name);
         Rumbler.PlayRumble(CurrentItem.Rumble);
+        GameManager.Instance.SetItemDescription(CurrentItem.Rumble.GetDescription());
     }
 
     void PlaySound()
     {
         Debug.Log(CurrentItem.Sound.name);
         SoundComp.PlaySound(CurrentItem.Sound);
+        GameManager.Instance.SetItemDescription(CurrentItem.Sound.GetDescription());
     }
 
     void OnSoundFinish()
     {
         Debug.Log("Sound Finished");
+    }
+
+    void OnItemFinish()
+    {
+        GameManager.Instance.SetItemDescription("");   
     }
 
 

@@ -1,10 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [SerializeField]
+    protected TextMeshProUGUI Text;
     
     public List<RumblePart> Rumbles;
 
@@ -18,12 +24,18 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        Text.SetText("");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void SetItemDescription(string InText)
+    {
+        Text.SetText(InText);
     }
 
     public FoundItem RandomizeItem()

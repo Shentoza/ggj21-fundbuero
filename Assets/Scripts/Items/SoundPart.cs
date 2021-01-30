@@ -5,7 +5,14 @@ using UnityEngine;
 
 [CreateAssetMenu]
 [System.Serializable]
-public class SoundPart : ScriptableObject
+public class SoundPart : ScriptableObject, IDescribable
 {
     [EventRef] public string Event;
+
+    [SerializeField]
+    protected string Description;
+    public string GetDescription()
+    {
+        return Description;
+    }
 }

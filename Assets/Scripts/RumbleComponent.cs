@@ -3,6 +3,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+[Serializable]
+public enum RumbleCurvesEnum
+{
+    Low,
+    High,
+    Both
+}
 //see: https://www.youtube.com/watch?v=WSw82nKXibc
 //https://github.com/Srfigie/UnityInputSystem_ControlerRumble
 public class RumbleComponent : MonoBehaviour
@@ -26,8 +33,10 @@ public class RumbleComponent : MonoBehaviour
     void ExecuteCurve()
     {
         float timePassed = Time.time - StartTime;
-        float CurrentVal = CurrentRumble.Curve.Evaluate(timePassed);
-        Gamepad.current.SetMotorSpeeds(CurrentVal, CurrentVal);
+        float LowValue = CurrentRumble.Curve.Evaluate(timePassed);
+        float HighValue =CurrentRumble.HighCurve.Evaluate(timePassed);
+        Gamepad.current.SetMotorSpeeds(LowValue, HighValue);
+        Debug.Log("Low: ("+LowValue+") High: ("+HighValue+")");
         if (timePassed > CurrentRumble.repeatFor)
         {
             StopItem();
