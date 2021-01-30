@@ -48,3 +48,5 @@ Thumbs.db
 # Builds #
 # ====== #
 Builds/
+Logs/AssetImportWorker0.log
+.idea
