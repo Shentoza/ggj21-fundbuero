@@ -218,6 +218,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240419765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7378631531782481663, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7378631531065896928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d822c0bee9759e04e8033c8cf8e1f31a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &649232991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1057,7 @@ PrefabInstance:
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: Rumbles.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
@@ -1078,6 +1090,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
+      propertyPath: Rumbles.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ced566b0dc967d4d9998ff18b5bede1,
+        type: 2}
+    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
+        type: 3}
       propertyPath: Visuals.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: e69de42f53a92814481e1f731017d8da,
@@ -1101,6 +1119,56 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1472672970}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 13528fd1-aff7-43df-8913-291fe87b4c7e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player/DebugButton[/XInputControllerWindows/buttonEast]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 240419765}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayDebugRumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378631531065896931, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7378631531782481600, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
         type: 3}
       propertyPath: m_RootOrder
@@ -1161,5 +1229,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7378631531782481662, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: CurrentRumble
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ced566b0dc967d4d9998ff18b5bede1,
+        type: 2}
+    - target: {fileID: 7378631531782481663, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2,
+        type: 3}
+      propertyPath: DebugRumble
+      value: 
+      objectReference: {fileID: 11400000, guid: f4263e881caf99247bbe150891971e3c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c7e190fcdd9e74ca0af3e5b08d74c2, type: 3}

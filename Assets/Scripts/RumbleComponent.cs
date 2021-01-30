@@ -36,7 +36,7 @@ public class RumbleComponent : MonoBehaviour
         float LowValue = CurrentRumble.Curve.Evaluate(timePassed);
         float HighValue =CurrentRumble.HighCurve.Evaluate(timePassed);
         Gamepad.current.SetMotorSpeeds(LowValue, HighValue);
-        Debug.Log("Low: ("+LowValue+") High: ("+HighValue+")");
+        //Debug.Log("Low: ("+LowValue+") High: ("+HighValue+")");
         if (timePassed > CurrentRumble.repeatFor)
         {
             StopItem();
