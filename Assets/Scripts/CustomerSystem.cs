@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class CustomerSystem : MonoBehaviour
 {
+    public static CustomerSystem Instance;
     protected FoundItem CurrentRequest;
 
     public UnityEvent OnRequestStarted;
@@ -16,6 +17,17 @@ public class CustomerSystem : MonoBehaviour
 
     [SerializeField]
     protected int NumOfRandomItems = 3;
+
+    void Start()
+    {
+        if (Instance)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+    }
+    
     void OnDestroy()
     {
         OnRequestStartedAction = null;
@@ -32,7 +44,10 @@ public class CustomerSystem : MonoBehaviour
     {
         float quota = CurrentRequest.Compare(Item);
         
+        Debug.Log(quota);
         OnRequestSubmitted.Invoke();
         OnRequestSubmittedAction?.Invoke(quota);
+        
+        StartRequest();
     }
 }

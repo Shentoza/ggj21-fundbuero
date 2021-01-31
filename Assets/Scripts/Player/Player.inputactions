@@ -22,20 +22,28 @@
                     "interactions": ""
                 },
                 {
-                    "name": "DebugButton",
-                    "type": "Button",
-                    "id": "13528fd1-aff7-43df-8913-291fe87b4c7e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "SelectItem",
+                    "name": "SubmitItem",
                     "type": "Button",
                     "id": "1910748a-3eab-4bbb-aee8-3052a7b254bb",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold"
+                },
+                {
+                    "name": "Inspect",
+                    "type": "Button",
+                    "id": "21a7964c-7de9-4bec-b772-7126fd199171",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CycleItem",
+                    "type": "Button",
+                    "id": "75c95f1e-18dc-4f08-b54e-4e1b4770fffc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -43,7 +51,7 @@
                     "name": "",
                     "id": "b127cd9b-6533-49d9-ac59-d60f770418df",
                     "path": "<Mouse>/press",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Use",
@@ -54,32 +62,10 @@
                     "name": "",
                     "id": "a1bc7b7b-a6f2-4d6f-ae88-e38970ce6f95",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "Default",
                     "action": "Use",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "87f70f5b-cf1f-40c2-a340-14a5ccaf4860",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Default",
-                    "action": "DebugButton",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5780a3ac-366d-438d-804f-0e61244a81d3",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "DebugButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -211,7 +197,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Default",
-                    "action": "SelectItem",
+                    "action": "SubmitItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -222,9 +208,97 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "SelectItem",
+                    "action": "SubmitItem",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "121a7784-0abb-4e55-ae41-0743e8053cc7",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "Inspect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86f6277a-f251-47da-b8e3-6a432ea490e8",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Inspect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Stick",
+                    "id": "5e0e17b6-0294-46e6-8e06-0ec112e7b4ee",
+                    "path": "1DAxis",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CycleItem",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "ab5027d7-ffbc-405a-9d41-df685c4c2eb3",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "CycleItem",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "4da8faf8-d820-4129-911e-185297b6bcf6",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "CycleItem",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "qe",
+                    "id": "48d948f3-e3a8-4840-aa5f-16959423d89f",
+                    "path": "1DAxis(whichSideWins=1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CycleItem",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9abe0b14-6637-4cb8-ac7b-c6f872b97888",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "CycleItem",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "89f7234d-aab2-4cc8-ba2a-5e13f83e21aa",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "CycleItem",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

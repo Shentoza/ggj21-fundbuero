@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,10 +18,28 @@ public class DescriptionComponent : MonoBehaviour
 
     [SerializeField]
     protected TextMeshProUGUI DescriptionText;
+
+    protected string CurrentText;
+
+    private bool bPlayAnimation = true;
+
+    void Awake()
+    {
+        CustomerSystem.OnRequestStartedAction += OnNewRequest;
+    }
+
+    private void OnDisable()
+    {
+        CustomerSystem.OnRequestStartedAction -= OnNewRequest;
+    }
+
+    /*void Update()
+    {
+        // Do Animationstuff
+        //bPlayAnimation = falseru
+    }*/
     
-
-
-    void SetDescription(IDescribable Description)
+    string GetDescription(IDescribable Description)
     {
         string baseDescr = "{0}";
         if (Description is RumblePart)
@@ -35,6 +54,17 @@ public class DescriptionComponent : MonoBehaviour
         {
             baseDescr = VisibleDescription;
         }
-        DescriptionText.SetText(string.Format(baseDescr, Description));
+        return string.Format(baseDescr, Description.GetDescription());
     }
+
+    public void OnNewRequest(FoundItem Item, int NumOfRandomGenerates)
+    {
+        CurrentText = GetDescription(Item.Visuals);
+        CurrentText += "\n " + GetDescription(Item.Rumble);
+        CurrentText += "\n " + GetDescription(Item.Sound);
+        
+        DescriptionText.SetText(CurrentText);
+        bPlayAnimation = false;
+    }
+    
 }

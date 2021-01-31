@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(RumbleComponent),typeof(SoundComponent))]
+[RequireComponent(typeof(RumbleComponent), typeof(SoundComponent))]
 public class PlayerController : MonoBehaviour
 {
     protected RumbleComponent Rumbler;
@@ -14,9 +15,30 @@ public class PlayerController : MonoBehaviour
 
     private FoundItem CurrentItem;
 
-    public RumblePart DebugRumble;
-
     [Range(0, 5)] public float TimeBetweenSteps = 0.5f;
+
+    [SerializeField] protected GameObject InspectGameObject;
+
+    private bool _bInspectionRunning = false;
+
+    public bool bInspectionRunning
+    {
+        get => _bInspectionRunning;
+
+        set
+        {
+            _bInspectionRunning = value;
+            InspectionStateChanged.Invoke(_bInspectionRunning);
+        }
+    }
+
+    public UnityEvent<bool> InspectionStateChanged;
+
+    private void Awake()
+    {
+        bInspectionRunning = false;
+        ItemInspectController.OnItemSelected += NewItemSelected;
+    }
 
     private void Start()
     {
@@ -27,36 +49,44 @@ public class PlayerController : MonoBehaviour
         SoundComp.FinishedItem.AddListener(OnSoundFinish);
     }
 
-    public void Look(InputAction.CallbackContext Context)
+    private void OnDisable()
     {
-        //Look stuff
+        ItemInspectController.OnItemSelected -= NewItemSelected;
     }
 
-    public void Use(InputAction.CallbackContext Context)
+    public void OnUse(InputAction.CallbackContext Context)
     {
-        if (Context.started)
+        if (Context.performed)
         {
-            UseItem(GameManager.Instance.RandomizeItem());
+            bInspectionRunning = true;
+            PlayRumble();
         }
     }
 
-    public void PlayDebugRumble(InputAction.CallbackContext Context)
+    public void OnSubmit(InputAction.CallbackContext Context)
     {
-        if (Context.started)
+        if (Context.performed)
         {
-            Rumbler.PlayRumble(DebugRumble);
+            CustomerSystem.Instance.SubmitItem(CurrentItem);
         }
     }
 
-    void UseItem(FoundItem Item)
+    public void OnInspect(InputAction.CallbackContext Context)
+    {
+        Debug.Log("Inspect");
+        if (Context.performed)
+        {
+            InspectGameObject.SetActive(!InspectGameObject.activeSelf);
+        }
+    }
+
+    void NewItemSelected(FoundItem Item)
     {
         CurrentItem = Item;
-        PlayRumble();
     }
 
     void OnRumbleFinish()
     {
-        //Debug.Log("Rumble Finished");
         if (CurrentItem)
         {
             Invoke("PlaySound", TimeBetweenSteps);
@@ -65,37 +95,24 @@ public class PlayerController : MonoBehaviour
 
     void PlayRumble()
     {
-        Debug.Log(CurrentItem.Rumble.name);
-        Rumbler.PlayRumble(CurrentItem.Rumble);
-        GameManager.Instance.SetItemDescription(CurrentItem.Rumble.GetDescription());
+        if (CurrentItem)
+        {
+            Rumbler.PlayRumble(CurrentItem.Rumble);
+        }
     }
 
     void PlaySound()
     {
-        Debug.Log(CurrentItem.Sound.name);
         SoundComp.PlaySound(CurrentItem.Sound);
-        GameManager.Instance.SetItemDescription(CurrentItem.Sound.GetDescription());
     }
 
     void OnSoundFinish()
     {
-        Debug.Log("Sound Finished");
-        if (CurrentItem)
-        {
-            Invoke("ShowVisuals", TimeBetweenSteps);
-        }
-    }
-
-    void ShowVisuals()
-    {
-        Instantiate(CurrentItem.Visuals.Visual);
+        OnItemFinish();
     }
 
     void OnItemFinish()
     {
-        GameManager.Instance.SetItemDescription("");
-        CurrentItem = null;
+        bInspectionRunning = false;
     }
-
-
 }
