@@ -29,6 +29,22 @@ public class GameManager : MonoBehaviour
     }
 
     public UnityEvent OnGameStart;
+
+    private int _score = 0;
+    [SerializeField] protected TextMeshProUGUI Text;
+
+    [SerializeField]private int MinScore = -100;
+    [SerializeField]private int MaxScore = 100;
+    public int Score
+    {
+        get => _score;
+        set
+        {
+            _score = value;
+            Text.SetText(value.ToString());
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +52,21 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        CustomerSystem.OnRequestSubmittedAction += OnRequestSubmitted;
         CurrentDuration = MaxDuration;
         OnGameStart.Invoke();
     }
+
+    private void OnDestroy()
+    {
+        CustomerSystem.OnRequestSubmittedAction -= OnRequestSubmitted;
+    }
+
+    public void OnRequestSubmitted(float quota)
+    {
+        Score +=  (int)Mathf.Lerp(MinScore, MaxScore, quota);
+    } 
 
     void Update()
     {

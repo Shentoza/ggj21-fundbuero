@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b1d22889f82ae479d9e9bd8540ac56, type: 3}
   m_Name: Item1
   m_EditorClassIdentifier: 
-  Description: thing1
+  Description: a greyboy
   Visual: {fileID: 4214020812844425680, guid: 852ae070361fbd64a994b0fced5461b7, type: 3}

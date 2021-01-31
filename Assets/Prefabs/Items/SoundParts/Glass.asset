@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b1d22889f82ae479d9e9bd8540ac56, type: 3}
-  m_Name: Item3
+  m_Script: {fileID: 11500000, guid: 2da1e3f724ff2394ea33858e7df1b599, type: 3}
+  m_Name: Glass
   m_EditorClassIdentifier: 
-  Description: smoke
-  Visual: {fileID: 2684472234592770027, guid: 3a9003692b8fe0d4c8e789a79633a01e, type: 3}
+  Event: event:/sfxs/broken_bottle
+  Description: there's glass in it
