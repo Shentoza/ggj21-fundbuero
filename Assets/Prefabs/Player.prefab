@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7378631531065896932}
   - component: {fileID: 7378631531065896936}
   - component: {fileID: 916356545}
+  - component: {fileID: 83590811}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33,7 +34,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.68, y: 0.54, z: 0.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6267751933219699831}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d822c0bee9759e04e8033c8cf8e1f31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugRumble: {fileID: 0}
   TimeBetweenSteps: 1
+  InspectGameObject: {fileID: 0}
 --- !u!114 &7378631531782481662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +138,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7378631531782481663}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Look
+      - m_Target: {fileID: 6267751933219699830}
+        m_TargetAssemblyTypeName: ItemInspectController, Assembly-CSharp
+        m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -154,20 +156,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7378631531782481663}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Use
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6267751932153384468, guid: 044055149499d414d8d3f35e350b8035,
-          type: 3}
-        m_TargetAssemblyTypeName: ItemInspectController, Assembly-CSharp
-        m_MethodName: Look
+        m_MethodName: OnUse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -180,9 +169,53 @@ MonoBehaviour:
     m_ActionId: a71911ae-408a-4c73-bf37-faef21c4fe1b
     m_ActionName: Player/Use[/Mouse/press,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 13528fd1-aff7-43df-8913-291fe87b4c7e
-    m_ActionName: Player/DebugButton[/XInputControllerWindows/buttonEast,/Keyboard/f]
+      m_Calls:
+      - m_Target: {fileID: 7378631531782481663}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSubmit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1910748a-3eab-4bbb-aee8-3052a7b254bb
+    m_ActionName: Player/SelectItem[/XInputControllerWindows/buttonSouth,/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7378631531782481663}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInspect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 21a7964c-7de9-4bec-b772-7126fd199171
+    m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6267751933219699830}
+        m_TargetAssemblyTypeName: ItemInspectController, Assembly-CSharp
+        m_MethodName: OnCycle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 75c95f1e-18dc-4f08-b54e-4e1b4770fffc
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: Player
@@ -238,7 +271,118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cbc84ab5025294685263120d1e975d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RumbleDescription: So... the object feels like {0}
-  SoundDescription: But it sounds pretty much like {0}
-  VisibleDescription: And it looks just like {0}
+  RumbleDescription: So... the object feels like <b>{0}</b>
+  SoundDescription: But it sounds pretty much like <b>{0}</b>
+  VisibleDescription: And it looks just like <b>{0}</b>
   DescriptionText: {fileID: 0}
+--- !u!114 &83590811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378631531782481661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
+--- !u!1001 &2140582498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7378631531782481600}
+    m_Modifications:
+    - target: {fileID: 6267751932153384468, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: inspectCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384468, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: itemViewTransform
+      value: 
+      objectReference: {fileID: 6267751933219699831}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.919
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267751932153384471, guid: 044055149499d414d8d3f35e350b8035,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemViewController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 044055149499d414d8d3f35e350b8035, type: 3}
+--- !u!4 &6267751933219699831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6267751932153384469, guid: 044055149499d414d8d3f35e350b8035,
+    type: 3}
+  m_PrefabInstance: {fileID: 2140582498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6267751933219699830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6267751932153384468, guid: 044055149499d414d8d3f35e350b8035,
+    type: 3}
+  m_PrefabInstance: {fileID: 2140582498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267f67ea7f4f44243bb7cdd5a97ebe98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

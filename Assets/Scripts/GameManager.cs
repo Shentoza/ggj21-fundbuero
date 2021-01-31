@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,9 +12,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField]
-    protected TextMeshProUGUI Text;
-    
     public List<RumblePart> Rumbles;
 
     public List<SoundPart> Sounds;
@@ -38,7 +36,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        Text.SetText("");
         CurrentDuration = MaxDuration;
         OnGameStart.Invoke();
     }
@@ -46,11 +43,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CurrentDuration -= Time.deltaTime;
-    }
-    
-    public void SetItemDescription(string InText)
-    {
-        Text.SetText(InText);
     }
 
     public FoundItem RandomizeItem()
@@ -76,12 +68,5 @@ public class GameManager : MonoBehaviour
         }
 
         return newItem;
-    }
-    
-    public void NewCustomer(){
-        //SpawnCustomer()
-        
-        
-        //Generiere Anfrage
     }
 }

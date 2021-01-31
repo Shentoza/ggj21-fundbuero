@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class ItemInspectController : MonoBehaviour
@@ -14,9 +16,15 @@ public class ItemInspectController : MonoBehaviour
     private int currentIndex;
     private bool inspecting;
 
-    [SerializeField] private float RotationSpeedMod = 1.0f;
+    [SerializeField] private float RotationSpeedMod = 2.0f;
 
     private Vector2 CurrentRotationInput;
+
+    public UnityEvent OnItemSelectedEvent;
+
+    private bool bInspectionRunning = false;
+
+    public static event Action<FoundItem> OnItemSelected;
 
     private void Awake()
     {
@@ -37,38 +45,21 @@ public class ItemInspectController : MonoBehaviour
         CustomerSystem.OnRequestStartedAction -= OnNewRequest;
     }
 
-    private void Start()
-    {
-        if (items.Count == 0)
-        {
-            Debug.LogWarning("No items to inspect added!");
-        }
-    }
-
     public void EnterInspectionMode()
     {
-        if (inspecting)
-        {
-            return;
-        }
-
         inspecting = true;
 
-        foreach (Camera cam in Camera.allCameras)
-        {
-            cam.gameObject.SetActive(false);
-            Debug.Log("Disable");
-        }
-
-        inspectCamera.gameObject.SetActive(true);
+        //inspectCamera.gameObject.SetActive(true);
 
         // Show first item
         SetCurrentItem(items[0]);
     }
 
-    private void OpenItemDetails()
+    public void OnInspectionStateChanged(bool newState)
     {
+        bInspectionRunning = newState;
     }
+
 
     private void NextItem()
     {
@@ -102,30 +93,33 @@ public class ItemInspectController : MonoBehaviour
         SetCurrentItem(items[currentIndex]);
     }
 
-    private void Update()
+    public void OnCycle(InputAction.CallbackContext Context)
     {
-        if (Keyboard.current.mKey.wasPressedThisFrame)
+        if (Context.performed && !bInspectionRunning)
         {
-            Debug.Log("TEST");
-            EnterInspectionMode();
-        }
-
-        if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
-        {
-            Debug.Log("L");
-            PreviousItem();
-        }
-
-        if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
-        {
-            Debug.Log("R");
-            NextItem();
+            float val = Context.ReadValue<float>();
+            if (val > 0.4f)
+            {
+                NextItem();
+            }
+            else if (val < -0.4f)
+            {
+                PreviousItem();
+            }
         }
     }
 
     public void OnLook(InputAction.CallbackContext Context)
     {
-        CurrentRotationInput = Context.performed ? Context.ReadValue<Vector2>() : Vector2.zero;
+        CurrentRotationInput = Vector2.zero;
+        if (Context.performed && !bInspectionRunning)
+        {
+            CurrentRotationInput = Context.ReadValue<Vector2>()*RotationSpeedMod;
+        }
+        else if (bInspectionRunning)
+        {
+            CurrentRotationInput = Vector2.zero;
+        }
     }
 
     public void OnNewRequest(FoundItem RequestedItem, int NumRandomItems)
@@ -138,6 +132,7 @@ public class ItemInspectController : MonoBehaviour
         }
 
         UtilClass.Shuffle(items);
+        EnterInspectionMode();
     }
 
     public void SetCurrentItem(FoundItem InFoundItem)
@@ -146,5 +141,7 @@ public class ItemInspectController : MonoBehaviour
         Destroy(currentViewObject);
         itemViewTransform.rotation = Quaternion.identity;
         currentViewObject = Instantiate(currentObject.Visuals.Visual, itemViewTransform);
+        OnItemSelectedEvent.Invoke();
+        OnItemSelected?.Invoke(InFoundItem);
     }
 }
