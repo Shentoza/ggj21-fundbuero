@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -76,12 +77,5 @@ public class GameManager : MonoBehaviour
         }
 
         return newItem;
-    }
-    
-    public void NewCustomer(){
-        //SpawnCustomer()
-        
-        
-        //Generiere Anfrage
     }
 }
