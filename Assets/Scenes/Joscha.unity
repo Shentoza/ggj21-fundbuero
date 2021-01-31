@@ -1430,18 +1430,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &858617486 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3511691297765406433, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5609543009402984634}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &887649908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,21 +3275,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrintableScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 3581053262446660405, guid: abc61d17a38c7184ba2844063d4c50ff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3581053263588000096, guid: abc61d17a38c7184ba2844063d4c50ff,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 68.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3581053263588000096, guid: abc61d17a38c7184ba2844063d4c50ff,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abc61d17a38c7184ba2844063d4c50ff, type: 3}
 --- !u!1 &3229441291806678048 stripped
@@ -3333,16 +3306,6 @@ PrefabInstance:
       propertyPath: TickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7939829564623381566}
-    - target: {fileID: 1090283724581458168, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3511691297765406433, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5178627968957728440, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}
       propertyPath: m_RootOrder
@@ -3397,16 +3360,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
-        type: 3}
-      propertyPath: Text
-      value: 
-      objectReference: {fileID: 858617486}
-    - target: {fileID: 5831144786901133252, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
-        type: 3}
-      propertyPath: MinScore
-      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 6276004353013186519, guid: 8d2adef69aaf8a04c98af5aefc9def9a,
         type: 3}

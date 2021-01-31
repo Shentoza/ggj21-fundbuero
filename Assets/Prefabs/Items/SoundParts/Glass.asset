@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da1e3f724ff2394ea33858e7df1b599, type: 3}
-  m_Name: Bass
+  m_Name: Glass
   m_EditorClassIdentifier: 
-  Event: event:/bass_sound
-  Description: a bass
+  Event: event:/sfxs/broken_bottle
+  Description: there's glass in it

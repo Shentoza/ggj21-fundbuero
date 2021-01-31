@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8023984343445195644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -301,9 +301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -575,6 +573,8 @@ MonoBehaviour:
   Sounds:
   - {fileID: 11400000, guid: 7e099835598b5504caa8dd2c266360de, type: 2}
   - {fileID: 11400000, guid: 329cdf37d8f07914aa32c555f02259ae, type: 2}
+  - {fileID: 11400000, guid: ef84a8f7b3e15a64a8d1d6cd16b76f7a, type: 2}
+  - {fileID: 11400000, guid: 451363e7097595d4f84a888c17bb99b1, type: 2}
   Visuals:
   - {fileID: 11400000, guid: 041ed653fd82d934aae231378416dd84, type: 2}
   - {fileID: 11400000, guid: 192bf2ebe908c6f45acac19ae697d4d8, type: 2}
@@ -608,6 +608,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Text: {fileID: 3511691297765406433}
+  MinScore: -200
+  MaxScore: 100
 --- !u!114 &449937553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28be5f0b81b23c49815f3feb67ce9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentRequest: {fileID: 0}
   OnRequestStarted:
     m_PersistentCalls:
       m_Calls: []
