@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     protected SoundComponent SoundComp;
 
-    private FoundItem CurrentItem;
+    [SerializeField]private FoundItem CurrentItem;
 
     [Range(0, 5)] public float TimeBetweenSteps = 0.5f;
 

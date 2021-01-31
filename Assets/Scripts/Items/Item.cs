@@ -26,4 +26,8 @@ public class FoundItem : ScriptableObject
         return Equals / Max;
     }
 
+    public override string ToString()
+    {
+        return Rumble.ToString() + "|" + Sound.ToString() + "|" + Visuals.ToString();
+    }
 }

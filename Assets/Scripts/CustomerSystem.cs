@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class CustomerSystem : MonoBehaviour
 {
     public static CustomerSystem Instance;
-    protected FoundItem CurrentRequest;
+    
+    [SerializeField]protected FoundItem CurrentRequest;
 
     public UnityEvent OnRequestStarted;
 
@@ -43,8 +44,6 @@ public class CustomerSystem : MonoBehaviour
     public void SubmitItem(FoundItem Item)
     {
         float quota = CurrentRequest.Compare(Item);
-        
-        Debug.Log(quota);
         OnRequestSubmitted.Invoke();
         OnRequestSubmittedAction?.Invoke(quota);
         

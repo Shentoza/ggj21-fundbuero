@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b1d22889f82ae479d9e9bd8540ac56, type: 3}
   m_Name: Item4
   m_EditorClassIdentifier: 
-  Description: thing4
+  Description: a meshed box
   Visual: {fileID: 8891865905732873299, guid: d96b1ab56779486479697750930e5b0a, type: 3}
