@@ -196,7 +196,7 @@
                 {
                     "name": "",
                     "id": "86f6277a-f251-47da-b8e3-6a432ea490e8",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
