@@ -30,6 +30,15 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnGameStart;
 
+    public enum CurrentState
+    {
+        MailNotOpened,
+        MailOpen,
+        Warehouse
+    }
+
+    public CurrentState State = CurrentState.MailNotOpened;
+
     private int _score = 0;
     [SerializeField] protected TextMeshProUGUI Text;
 

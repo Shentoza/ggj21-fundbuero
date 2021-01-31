@@ -22,14 +22,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SubmitItem",
-                    "type": "Button",
-                    "id": "1910748a-3eab-4bbb-aee8-3052a7b254bb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Inspect",
                     "type": "Button",
                     "id": "21a7964c-7de9-4bec-b772-7126fd199171",
@@ -51,7 +43,7 @@
                     "name": "",
                     "id": "b127cd9b-6533-49d9-ac59-d60f770418df",
                     "path": "<Mouse>/press",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Use",
@@ -62,7 +54,7 @@
                     "name": "",
                     "id": "a1bc7b7b-a6f2-4d6f-ae88-e38970ce6f95",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Default",
                     "action": "Use",
@@ -187,28 +179,6 @@
                     "processors": "StickDeadzone",
                     "groups": "Default",
                     "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fb2b0d3e-0455-4222-846f-14b6e7972808",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Default",
-                    "action": "SubmitItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bd55628c-8a21-4c14-a3e7-ee215de58f3a",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "SubmitItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

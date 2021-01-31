@@ -13,16 +13,13 @@ public class UIControll : MonoBehaviour
 
     public static UIControll Instance;
 
-    [Header("Cameras")]
-    public Camera officeCam;
+    [Header("Cameras")] public Camera officeCam;
     public Camera warehouseCam;
 
-    [Header("UI")]
-    public GameObject display;
+    [Header("UI")] public GameObject display;
     public Button button;
 
-    [SerializeField]
-    private Animator doorAnimator;
+    [SerializeField] private Animator doorAnimator;
 
     private void Start()
     {
@@ -30,29 +27,44 @@ public class UIControll : MonoBehaviour
         Instance = this;
     }
 
+    public void showMail()
+    {
+        display.SetActive(true);
+        button.GetComponentInChildren<Text>().text = "Switch to Warehouse";
+        GameManager.Instance.State = GameManager.CurrentState.MailOpen;
+    }
+
     public void SwitchCameras()
-    { 
+    {
         if (officeCam.enabled && display.activeSelf == false)
         {
-            display.SetActive(true);
-            button.GetComponentInChildren<Text>().text = "Switch to Warehouse";
+            showMail();
         }
 
         else if (officeCam.enabled && display.activeSelf)
         {
             // play Door Animation
-            StartCoroutine(SwitchToWarehouse());
-
-
+            StartSwitchToWareHouse();
         }
         else if (warehouseCam.enabled)
         {
-            button.GetComponentInChildren<Text>().text = "Switch to Warehouse";
-            display.SetActive(true);
-
-            officeCam.enabled = true;
-            warehouseCam.enabled = false;
+            SwitchBackToOffice();
         }
+    }
+
+    public void StartSwitchToWareHouse()
+    {
+        StartCoroutine(SwitchToWarehouse());
+    }
+
+    public void SwitchBackToOffice()
+    {
+        button.GetComponentInChildren<Text>().text = "Switch to Warehouse";
+        display.SetActive(true);
+
+        officeCam.enabled = true;
+        warehouseCam.enabled = false;
+        GameManager.Instance.State = GameManager.CurrentState.MailOpen;
     }
 
     IEnumerator SwitchToWarehouse()
@@ -66,6 +78,7 @@ public class UIControll : MonoBehaviour
         display.SetActive(false);
         officeCam.enabled = false;
         warehouseCam.enabled = true;
+        GameManager.Instance.State = GameManager.CurrentState.Warehouse;
     }
 
     public void SubmitItem()

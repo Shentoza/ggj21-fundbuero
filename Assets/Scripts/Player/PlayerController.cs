@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug;
 
 [RequireComponent(typeof(RumbleComponent), typeof(SoundComponent))]
 public class PlayerController : MonoBehaviour
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] protected GameObject InspectGameObject;
 
     private bool _bInspectionRunning = false;
+    
 
     public bool bInspectionRunning
     {
@@ -74,16 +77,24 @@ public class PlayerController : MonoBehaviour
     {
         if (Context.performed)
         {
-            bInspectionRunning = true;
-            PlayRumble();
-        }
-    }
-
-    public void OnSubmit(InputAction.CallbackContext Context)
-    {
-        if (Context.performed)
-        {
-            SubmitCurrentItem();
+            var GM = GameManager.Instance;
+            switch(GameManager.Instance.State)
+            {
+                case GameManager.CurrentState.MailNotOpened:
+                    UIControll.Instance.showMail();
+                    break;
+                case GameManager.CurrentState.MailOpen:
+                    UIControll.Instance.StartSwitchToWareHouse();
+                    GM.State = GameManager.CurrentState.Warehouse;
+                    break;
+                case GameManager.CurrentState.Warehouse:
+                    SubmitCurrentItem();
+                    UIControll.Instance.SwitchBackToOffice();
+                    GM.State = GameManager.CurrentState.MailOpen;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 
@@ -95,9 +106,10 @@ public class PlayerController : MonoBehaviour
     public void OnInspect(InputAction.CallbackContext Context)
     {
         Debug.Log("Inspect");
-        if (Context.performed)
+        if (Context.performed && GameManager.Instance.State == GameManager.CurrentState.Warehouse)
         {
-            InspectGameObject.SetActive(!InspectGameObject.activeSelf);
+            bInspectionRunning = true;
+            PlayRumble();
         }
     }
 
