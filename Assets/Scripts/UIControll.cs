@@ -11,6 +11,8 @@ public class UIControll : MonoBehaviour
      * #3 Switch camera
      */
 
+    public static UIControll Instance;
+
     [Header("Cameras")]
     public Camera officeCam;
     public Camera warehouseCam;
@@ -25,6 +27,7 @@ public class UIControll : MonoBehaviour
     private void Start()
     {
         display.SetActive(false);
+        Instance = this;
     }
 
     public void SwitchCameras()
@@ -58,10 +61,16 @@ public class UIControll : MonoBehaviour
         display.SetActive(false);
         yield return new WaitForSeconds(1.5f);
         // actiavte changes
-        button.GetComponentInChildren<Text>().text = "Switch to Office";
+        button.GetComponentInChildren<Text>().text = "Submit current Item";
+        button.onClick.AddListener(SubmitItem);
         display.SetActive(false);
         officeCam.enabled = false;
         warehouseCam.enabled = true;
+    }
 
+    public void SubmitItem()
+    {
+        button.onClick.RemoveListener(SubmitItem);
+        PlayerController.Instance.SubmitCurrentItem();
     }
 }

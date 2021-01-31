@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5b1d22889f82ae479d9e9bd8540ac56, type: 3}
-  m_Name: Item4
+  m_Name: SC1 6
   m_EditorClassIdentifier: 
-  Description: a meshed box
-  Visual: {fileID: 8891865905732873299, guid: d96b1ab56779486479697750930e5b0a, type: 3}
+  Description: 'hugh nintendo fan '
+  Visual: {fileID: 2692368706245652226, guid: e85c634e0afbd654ebe8b19ccc8de616, type: 3}

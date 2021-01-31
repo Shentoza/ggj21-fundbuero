@@ -9,11 +9,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(RumbleComponent), typeof(SoundComponent))]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+    
     protected RumbleComponent Rumbler;
 
     protected SoundComponent SoundComp;
 
-    [SerializeField]private FoundItem CurrentItem;
+    [SerializeField] private FoundItem CurrentItem;
 
     [Range(0, 5)] public float TimeBetweenSteps = 0.5f;
 
@@ -40,8 +42,22 @@ public class PlayerController : MonoBehaviour
         ItemInspectController.OnItemSelected += NewItemSelected;
     }
 
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+
     private void Start()
     {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+            return;
+        }
         Rumbler = GetComponent<RumbleComponent>();
         Rumbler.FinishedRumbleItem.AddListener(OnRumbleFinish);
 
@@ -67,8 +83,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Context.performed)
         {
-            CustomerSystem.Instance.SubmitItem(CurrentItem);
+            SubmitCurrentItem();
         }
+    }
+
+    public void SubmitCurrentItem()
+    {
+        CustomerSystem.Instance.SubmitItem(CurrentItem);
     }
 
     public void OnInspect(InputAction.CallbackContext Context)

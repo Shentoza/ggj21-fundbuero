@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -36,7 +35,7 @@ public class ItemInspectController : MonoBehaviour
         if (currentViewObject)
         {
             var q = Quaternion.Euler(CurrentRotationInput.y, -CurrentRotationInput.x, 0.0f);
-            currentViewObject.transform.localRotation = (q * currentViewObject.transform.localRotation);
+            currentViewObject.transform.localRotation =  currentViewObject.transform.localRotation *q;
         }
     }
 
@@ -139,7 +138,6 @@ public class ItemInspectController : MonoBehaviour
     {
         currentObject = InFoundItem;
         Destroy(currentViewObject);
-        itemViewTransform.rotation = Quaternion.identity;
         currentViewObject = Instantiate(currentObject.Visuals.Visual, itemViewTransform);
         OnItemSelectedEvent.Invoke();
         OnItemSelected?.Invoke(InFoundItem);
