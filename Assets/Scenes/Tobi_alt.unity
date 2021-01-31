@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 109531998}
   - component: {fileID: 109531997}
   m_Layer: 0
-  m_Name: Lager
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,8 +294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109531996}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -49.45}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -77.7}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -1424,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857524003}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: -33.89}
+  m_LocalPosition: {x: 0, y: 1, z: -33.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2414,7 +2414,7 @@ PrefabInstance:
     - target: {fileID: 7939829565881335654, guid: 113c1966763c887439422a77cd41b218,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -44.06
+      value: -43.4
       objectReference: {fileID: 0}
     - target: {fileID: 7939829565881335654, guid: 113c1966763c887439422a77cd41b218,
         type: 3}
